@@ -37,14 +37,14 @@
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// | BTCLR |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | CTRL  |     |     |     |     |     |   |     |     |  UP |     |     |  TD0 |
-// | SHFT  |     |     |     |     |     |   |     | LFT | DWN | RGT |     |  DEL |
+// | INS   |  BTCLR   |     |     |     |     |   |  Zoom In  |  HOME  |  UP  |  PG_UP  |  Scroll Up  | BKSP |
+// | CTRL  |          |     |     |     |     |   |           |  LFT   |      |  RGT    |             |  TD0 |
+// | SHFT  |          |     |     |     |     |   |  Zoom Out |  END   |  DWN | PG_Down |  Scrool Dn  |  DEL |
 //                    | GUI |     | ENT |   | SPC |     | ALT |
                         bindings = <
-   &bt BT_CLR &kp N1    &kp N2    &kp N3       &kp N4     &kp N5     &kp N6   &kp N7     &kp N8    &kp N9    &kp N0 &kp BSPC
-   &kp LCTRL  &trans    &trans    &trans       &trans     &trans     &trans   &trans     &kp UP    &trans    &trans &td0
-   &kp LSHFT  &trans    &trans    &trans       &trans     &trans     &trans   &kp LEFT   &kp DOWN  &kp RIGHT &trans &kp DEL
+   &kp INS    &bt BT_CLR  &trans    &trans       &trans     &trans     &kp C_AC_ZOOM_IN   &kp HOME  &kp UP    &kp PG_UP  &kp C_AC_SCROLL_UP   &kp BSPC
+   &kp LCTRL  &trans      &trans    &trans       &trans     &trans     &trans             &kp LEFT  &trans    &kp RIGHT  &trans               &td0
+   &kp LSHFT  &trans      &trans    &trans       &trans     &trans     &kp C_AC_ZOOM_OUT  &kp END   &kp DOWN  &kp PG_DN  &kp C_AC_SCROLL_DOWN &kp DEL
                        	     &kp LGUI     &trans     &kp RET    &kp SPACE  &trans   &kp RALT
                         >;
                 };
