@@ -27,12 +27,12 @@
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
 // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | ENT |   | SPC | RSE  | ALT |
+//                    | ALT | LWR | ENT |   | SPC | RSE  | GUI |
                         bindings = <
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &mo 1 &kp RET   &kp SPACE &mo 2 &kp RALT
+                  &kp LALT &mo 1 &kp RET   &kp SPACE &mo 2 &kp RGUI
                         >;
                 };
                 lower_layer {
@@ -40,26 +40,26 @@
 // | INS   |  BTCLR   |     |     |     |     |   |  Zoom In  |  HOME  |  UP  |  PG_UP  |  Scroll Up  | BKSP |
 // | CTRL  |          |     |     |     |     |   |           |  LFT   |      |  RGT    |             |  TD0 |
 // | SHFT  |          |     |     |     |     |   |  Zoom Out |  END   |  DWN | PG_Down |  Scrool Dn  |  DEL |
-//                    | GUI |     | ENT |   | SPC |     | ALT |
+//                    | ALT |     | ENT |   | SPC |     | GUI |
                         bindings = <
    &kp INS    &bt BT_CLR  &trans    &trans       &trans     &trans     &kp C_AC_ZOOM_IN   &kp HOME  &kp UP    &kp PG_UP  &kp C_AC_SCROLL_UP   &kp BSPC
    &kp LCTRL  &trans      &trans    &trans       &trans     &trans     &trans             &kp LEFT  &trans    &kp RIGHT  &trans               &td0
    &kp LSHFT  &trans      &trans    &trans       &trans     &trans     &kp C_AC_ZOOM_OUT  &kp END   &kp DOWN  &kp PG_DN  &kp C_AC_SCROLL_DOWN &kp DEL
-                       	     &kp LGUI     &trans     &kp RET    &kp SPACE  &trans   &kp RALT
+                       	     &kp LALT     &trans     &kp RET    &kp SPACE  &trans   &kp RGUI
                         >;
                 };
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// | INS  |  F1  |  F2  |  F3  |  F4  |  F7  |   |  1  |  2  |  3  |  4  |  5  | BKSP |
-// | CTRL |      |      |      |  F10 |  F11 |   |  6  |  7  |  8  |  9  |  0  |  '   |
-// | SHFT |      |      |      |      |      |   |  -  |  =  |  \  |  [  |  ]  |  ~   |
-//                    | ALT |     | ENT |   | SPC |     | ALT |
+// | INS  |  F1  |  F2  |  F3  |  F4  |  F5  |   |  1  |  2  |  3  |  4  |  5  | BKSP |
+// | CTRL |      |      |  F7  |  F10 |  F11 |   |  6  |  7  |  8  |  9  |  0  |  '   |
+// | SHFT |      |      |      |      |  ~   |   |  -  |  =  |  \  |  [  |  ]  |  ESC   |
+//                    | ALT |     | ENT |   | SPC |     | GUI |
                         bindings = <
-   &kp INS   &kp F1   &kp F2  &kp F3  &kp F4  &kp F7   &kp N1    &kp N2    &kp N3   &kp N4   &kp N5   &kp BSPC
-   &kp LCTRL &trans   &trans  &trans  &kp F10 &kp F11  &kp N6    &kp N7    &kp N8   &kp N9   &kp N0   &kp SQT
-   &kp LSHFT &trans   &trans  &trans   &trans   &trans &kp MINUS &kp EQUAL &kp BSLH &kp LBKT &kp RBKT &kp TILDE
-                    	      &kp LALT &trans   &kp RET   &kp SPACE   &trans    &kp RALT
+   &kp INS   &kp F1   &kp F2  &kp F3   &kp F4   &kp F5    &kp N1    &kp N2    &kp N3   &kp N4   &kp N5   &kp BSPC
+   &kp LCTRL &trans   &trans  &kp F7   &kp F10  &kp F11   &kp N6    &kp N7    &kp N8   &kp N9   &kp N0   &kp SQT
+   &kp LSHFT &trans   &trans  &trans   &trans   &kp TILDE &kp MINUS &kp EQUAL &kp BSLH &kp LBKT &kp RBKT &kp ESC
+                    	      &kp LALT &trans   &kp RET   &kp SPACE   &trans    &kp RGUI
                         >;
                 };
         };
