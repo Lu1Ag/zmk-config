@@ -38,15 +38,15 @@
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// | INS   |  BTCLR   |     |     |     |     |   |  Zoom In  |  HOME  |  UP  |  PG_UP  |  Scroll Up  | BKSP |
-// | CTRL  |          |     |     |     |     |   |           |  LFT   |      |  RGT    |             |  TD0 |
-// | SHFT  |  BT Tog  |     |     |     |     |   |  Zoom Out |  END   |  DWN | PG_Down |  Scrool Dn  |  DEL |
+// | INS   |  BTCLR   |     |     |     |  CAD |   |  Zoom In  |  HOME  |  UP  |  PG_UP  |  Scroll Up  | BKSP |
+// | CTRL  |          |     |     |     |      |   |           |  LFT   |      |  RGT    |             |  TD0 |
+// | SHFT  |  BT Tog  |     |     |     |      |   |  Zoom Out |  END   |  DWN | PG_Down |  Scrool Dn  |  DEL |
 //                    | ALT |     | ENT |   | SPC |     | GUI |
                         bindings = <
-   &kp INS    &bt BT_CLR    &trans    &trans       &trans     &trans     &kp C_AC_ZOOM_IN   &kp HOME  &kp UP    &kp PG_UP  &kp C_AC_SCROLL_UP   &kp BSPC
+   &kp INS    &bt BT_CLR    &trans    &trans       &trans     &kp LC(LA(DEL))     &kp C_AC_ZOOM_IN   &kp HOME  &kp UP    &kp PG_UP  &kp C_AC_SCROLL_UP   &kp BSPC
    &kp LCTRL  &none        &trans    &trans       &trans     &trans     &none              &kp LEFT  &none     &kp RIGHT  &none                &td0
    &kp LSHFT  &out OUT_TOG &trans    &trans       &trans     &trans     &kp C_AC_ZOOM_OUT  &kp END   &kp DOWN  &kp PG_DN  &kp C_AC_SCROLL_DOWN &kp DEL
-                       	     &kp LALT     &trans     &kp RET    &kp SPACE  &trans   &mt LC(LALT(DEL)) RGUI
+                       	     &kp LALT     &trans     &kp RET    &kp SPACE  &trans   &kp RGUI
                         >;
                 };
 
