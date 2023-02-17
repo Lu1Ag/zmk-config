@@ -19,14 +19,7 @@
 			bindings = <&bt BT_SEL 0>, <&bt BT_SEL 1>, <&bt BT_SEL 2>, <&bt BT_SEL 3>, <&bt BT_SEL 4>;
 		};
 	};   
-	combos {
-        	compatible = "zmk,combos";
-        	combo_esc {
-           	 	timeout-ms = <50>;
-           	 	key-positions = <0 5>;
-           	 	bindings = <&kp DEL>;
-        	};
-	};
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -45,14 +38,14 @@
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// | INS   |  BTCLR   |     |     |     |  CAD |   |  Zoom In  |  HOME  |  UP  |  PG_UP  |  Scroll Up  | BKSP |
-// | CTRL  |          |     |     |     |      |   |           |  LFT   |      |  RGT    |             |  TD0 |
-// | SHFT  |  BT Tog  |     |     |     |      |   |  Zoom Out |  END   |  DWN | PG_Down |  Scrool Dn  |  DEL |
+// | INS   |  BTCLR   |     |     |     |  CAD |   |  Zoom In  |  HOME  |  UP  |  PG_UP  |  Scroll Up  | DEL |
+// | CTRL  |          |     |     |     |      |   |           |  LFT   |      |  RGT    |             | TD0 |
+// | SHFT  |  BT Tog  |     |     |     |      |   |  Zoom Out |  END   |  DWN | PG_Down |  Scrool Dn  | ESC |
 //                    | ALT |     | ENT |   | SPC |     | GUI |
                         bindings = <
-   &kp INS    &bt BT_CLR    &trans    &trans       &trans     &kp LC(LA(DEL))     &kp C_AC_ZOOM_IN   &kp HOME  &kp UP    &kp PG_UP  &kp C_AC_SCROLL_UP   &kp BSPC
+   &kp INS    &bt BT_CLR    &trans    &trans       &trans     &kp LC(LA(DEL))     &kp C_AC_ZOOM_IN   &kp HOME  &kp UP    &kp PG_UP  &kp C_AC_SCROLL_UP   &kp DEL
    &kp LCTRL  &none        &trans    &trans       &trans     &trans     &none              &kp LEFT  &none     &kp RIGHT  &none                &td0
-   &kp LSHFT  &out OUT_TOG &trans    &trans       &trans     &trans     &kp C_AC_ZOOM_OUT  &kp END   &kp DOWN  &kp PG_DN  &kp C_AC_SCROLL_DOWN &kp DEL
+   &kp LSHFT  &out OUT_TOG &trans    &trans       &trans     &trans     &kp C_AC_ZOOM_OUT  &kp END   &kp DOWN  &kp PG_DN  &kp C_AC_SCROLL_DOWN &kp ESC
                        	     &kp LALT     &trans     &kp RET    &kp SPACE  &trans   &kp RGUI
                         >;
                 };
